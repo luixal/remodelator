@@ -1,0 +1,60 @@
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+    <title>remote?</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"/>
+    <meta name="theme-color" content="#ffffff">
+    <!-- IMPORTANT: No CSS link needed as of v1 - It's all inlined -->
+    <!-- Pre v1.0.0 versions need the minified css -->
+    <!-- <link rel='stylesheet' href='https://unpkg.com/v-calendar/lib/v-calendar.min.css'> -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./tweaks.css' />
+  </head>
+
+  <body>
+    <div id='app'>
+      <div v-for="(task, index) in tasks" :key="index">
+        <p>Zona: {{task.Zona}}</p>
+        <p>Especialidad: {{task.Especialidad}}</p>
+        <p>Tarea: {{task.Tarea}}</p>
+        <p>Status: {{getStatus(task)}}</p>
+        <p>Comentarios: {{task.comentarios}}</p>
+      </div>
+      <!-- <div class="working-no"> -->
+        <!-- <h1 class="header">
+          <span>remote</span></br>
+          <span>or not</span>
+          <span>?</span>
+        </h1>
+        <div class="calendar">
+          <v-calendar
+            :attributes="attributes"
+            :columns="$screens({ default: 1, md: 2, lg: 6 })"
+            :rows="$screens({ default: 1, md: 2, lg: 2 })"
+            :is-expanded="$screens({ default: true, md: true, lg: false })">
+          </v-calendar>
+        </div>
+        <div id="footer" :class="{ 'working-home': tomorrowWillBeRemote, office: tomorrowWillBeOffice, 'working-no': tomorrowWillBeFree, 'weekend': tomorrowWillBeWeekend}" v-cloak>
+          {{tomorrowMessage}}
+        </div> -->
+      <!-- </div> -->
+    </div>
+
+    <!-- 1. Link Vue Javascript -->
+    <script src='https://unpkg.com/vue/dist/vue.js'></script>
+
+    <!-- 2. Link VCalendar Javascript (Plugin automatically installed) -->
+    <!-- <script src='https://unpkg.com/v-calendar'></script> -->
+    <!-- <script src="https://moment.github.io/luxon/global/luxon.min.js"></script> -->
+
+    <!--3. Create the Vue instance-->
+    <!-- <script src="dates.json"></script> -->
+    <script src='./main.js'></script>
+
+  </body>
+
+</html>

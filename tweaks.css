@@ -1,0 +1,115 @@
+html,body {
+   height: 100%;
+   margin: 0;
+   overflow: auto;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.custom {
+  background-color: #ced4da !important;
+  border-radius: 0 !important;
+}
+
+#app {
+  height: 100%;
+}
+
+.header {
+  font-family: 'Epilogue', sans-serif;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.calendar {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.working-home {
+  background-color: #3182ce;
+  color: white;
+}
+
+.working-no {
+  background-color: #38a169;
+  color: white;
+}
+
+.weekend {
+  background-color: #fca311;
+  color: white;
+}
+
+.ilustration {
+  width: 95%;
+  margin-top: 2rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-family: 'Epilogue', sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+
+.next-day-item {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 200;
+}
+
+/* centers calendar and adds card-like style */
+.vc-container {
+  margin: auto;
+  border: 0px !important;
+  padding: 5px 15px !important;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* hides until values are resolved/loaded */
+[v-cloak] { display: none; }
+
+/* makes days of next/prev month "visible" */
+@media only screen and (max-width: 768px) {
+
+  .vc-day .vc-opacity-0 {
+    opacity: 0.3;
+  }
+
+  .vc-container {
+    /* margin: auto; */
+    /* border: 0px !important; */
+    padding: 2px 2px !important;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  }
+}
+
+.vc-day .vc-pointer-events-none {
+  pointer-events: all;
+}
+
+/* overrides light color joining days in range */
+.vc-bg-blue-200 {
+  background-color: #3182ce !important;
+}
+
+.vc-bg-green-200 {
+  background-color: #38a169 !important;
+}
+
+.weekday-7, .weekday-1 {
+  opacity: 0.3;
+}
